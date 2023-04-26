@@ -1,0 +1,19 @@
+---
+# tasks file for create-user-with-sudo
+- name: Create user account
+  user:
+    name: "{{ item }}"
+    state: present
+    shell: /bin/bash
+  with_items:
+    - "{{ users_list }}"
+
+- name: Update User with sudo privilege
+  community.general.sudoers:
+    name: add-user-sudo
+    state: present
+    user: "{{ item }}"
+    runas: root
+    commands: ALL
+  with_items:
+    - "{{ users_list }}"
