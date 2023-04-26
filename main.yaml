@@ -5,3 +5,4 @@
 
   roles:
     - set-motd
+    - disable-users
