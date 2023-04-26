@@ -9,11 +9,10 @@
     - "{{ users_list }}"
 
 - name: Update User with sudo privilege
-  community.general.sudoers:
-    name: add-user-sudo
-    state: present
-    user: "{{ item }}"
-    runas: root
-    commands: ALL
+  ansible.builtin.blockinfile:
+    path: /etc/sudoers.d/90-cloud-init-users
+    block: |
+      # User rules for "{{ item }}"
+      "{{ item }}" ALL=(ALL) NOPASSWD:ALL
   with_items:
     - "{{ users_list }}"
