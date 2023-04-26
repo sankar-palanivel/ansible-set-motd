@@ -1,5 +1,5 @@
 ---
-- hosts: selfservice-demo-group
+- hosts: selfservice_demo_group
   gather_facts: false
   become: true
 
