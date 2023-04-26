@@ -2,7 +2,9 @@
 # tasks file for disable-users
 - name: disable user accounts
   ansible.builtin.user:
-    name: "{{ user }}"
+    name: "{{ item }}"
     state: present
     password_lock: true
     shell: "/sbin/nologin"
+  with_items:
+    - "{{ users_list }}"
