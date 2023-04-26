@@ -12,7 +12,7 @@
   ansible.builtin.blockinfile:
     path: /etc/sudoers.d/90-cloud-init-users
     block: |
-      # User rules for "{{ item }}"
-      "{{ item }}" ALL=(ALL) NOPASSWD:ALL
+      # User rules for {{ item }}
+      {{ item }} ALL=(ALL) NOPASSWD:ALL
   with_items:
     - "{{ users_list }}"
