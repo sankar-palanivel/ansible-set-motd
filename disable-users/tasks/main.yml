@@ -5,6 +5,5 @@
     name: "{{ item }}"
     state: present
     password_lock: true
-    shell: "/sbin/nologin"
   with_items:
     - "{{ users_list }}"
