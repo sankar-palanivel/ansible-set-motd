@@ -10,3 +10,4 @@
     - update-repos
     - update-sshd-config
     - update-cron-permission
+    - update-etcfiles-permission
