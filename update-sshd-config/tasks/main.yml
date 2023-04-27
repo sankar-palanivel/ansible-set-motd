@@ -18,6 +18,24 @@
     regexp: '^\#PermitRootLogin'
     line: PermitRootLogin no
 
+- name: Disable PasswordAuthentication parameter
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication'
+    line: PasswordAuthentication no
+
+- name: Disable ClientAliveInterval parameter
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '#ClientAliveInterval'
+    line: ClientAliveInterval  3600
+
+- name: Disable ClientAliveCountMax parameter
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '#ClientAliveCountMax'
+    line: ClientAliveCountMax  1
+
 - name: Restart service sshd
   ansible.builtin.service:
     name: sshd
