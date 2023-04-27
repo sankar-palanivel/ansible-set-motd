@@ -9,3 +9,4 @@
     - create-user-with-sudo
     - update-repos
     - update-sshd-config
+    - update-cron-permission

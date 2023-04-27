@@ -1,0 +1,10 @@
+---
+# tasks file for update-cron-permission
+- name: Change cron files ownership, group and permissions
+  ansible.builtin.file:
+    path: "{{ item }}"
+    owner: root
+    group: root
+    mode: '0600'
+  with_items:
+    - "{{ files }}"
