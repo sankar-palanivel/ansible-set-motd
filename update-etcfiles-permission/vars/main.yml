@@ -1,0 +1,17 @@
+---
+# vars file for update-etcfiles-permission
+files1:
+  - /etc/shadow
+  - /etc/gshadow
+  - /etc/passwd
+  - /etc/group
+
+files2:
+  - /etc/fstab
+  - /etc/hosts
+  - /etc/hostname
+  - /etc/timezone
+  - /etc/bash.bashrc
+
+files3:
+  - /boot/grub/grub.cfg

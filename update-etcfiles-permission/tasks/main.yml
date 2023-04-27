@@ -1,0 +1,10 @@
+---
+# tasks file for update-etcfiles-permission
+- name: Change etc files ownership, group and permissions
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - "{path: files1, mode: '0700'}"
+    - "{path: files2, mode: '0644'}"
+    - "{path: files3, mode: '0600'}"
