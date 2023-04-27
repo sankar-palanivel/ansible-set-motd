@@ -29,7 +29,7 @@
 - name: Add lynis apt key
   ansible.builtin.apt_key:
     url: https://packages.cisofy.com/keys/cisofy-software-public.key
-    state:
+    state: present
   changed_when: true
 
 - name: Add lynis apt repository
