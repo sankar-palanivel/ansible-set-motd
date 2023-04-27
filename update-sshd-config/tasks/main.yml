@@ -15,7 +15,8 @@
 - name: Disable PermitRootLogin parameter
   ansible.builtin.lineinfile:
     path: /etc/ssh/sshd_config
-    regexp: '^\#PermitRootLogin'
+    #regexp: '^\#PermitRootLogin'
+    regexp: '^#?\s*PermitRootLogin\s'
     line: PermitRootLogin no
 
 - name: Disable PasswordAuthentication parameter
