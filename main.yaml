@@ -11,3 +11,4 @@
     - update-sshd-config
     - update-cron-permission
     - update-etcfiles-permission
+    - install-packages
