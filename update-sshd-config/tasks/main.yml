@@ -15,9 +15,8 @@
 - name: Disable PermitRootLogin parameter
   ansible.builtin.lineinfile:
     path: /etc/ssh/sshd_config
-    regexp: '^\*PermitRootLogin'
+    regexp: '^\SPermitRootLogin'
     line: PermitRootLogin no
-    backup: true
 
 - name: Restart service sshd
   ansible.builtin.service:
