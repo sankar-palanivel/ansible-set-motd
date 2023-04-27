@@ -1,0 +1,7 @@
+---
+# tasks file for update-sshd-config
+- name: update /etc/hosts entry
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.0\.1'
+    line: 127.0.0.1 localhost poc-check-deployment
