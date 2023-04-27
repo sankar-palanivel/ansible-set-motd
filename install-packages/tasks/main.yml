@@ -4,13 +4,13 @@
   ansible.builtin.apt_key:
     url: https://packages.cisofy.com/keys/cisofy-software-public.key
     state: present
-  changed_when: true
+  changed_when: false
 
 - name: Add lynis apt repository
   ansible.builtin.apt_repository:
     repo: deb https://packages.cisofy.com/community/lynis/deb/ stable main
     state: present
-  changed_when: true
+  changed_when: false
 
 - name: Install logwatch package
   ansible.builtin.apt:
