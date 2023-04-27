@@ -27,4 +27,4 @@
 
 - name: debug install message
   debug:
-    msg: install_status
+    var: install_status
