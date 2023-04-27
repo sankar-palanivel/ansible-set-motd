@@ -1,2 +1,7 @@
 ---
 # vars file for install-packages
+packages:
+  - fail2ban
+  - logwatch
+  - rkhunter
+  - lynis

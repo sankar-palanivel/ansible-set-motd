@@ -1,31 +1,5 @@
 ---
 # tasks file for install-packages
-- name: Install fail2ban package
-  ansible.builtin.apt:
-    name: fail2ban
-    state: present
-    force: true
-    install_recommends: true
-    update_cache: true
-  notify:
-      - start and enable fail2ban service
-
-- name: Install logwatch package
-  ansible.builtin.apt:
-    name: logwatch
-    state: present
-    force: true
-    install_recommends: true
-    update_cache: true
-
-- name: Install rkhunter package
-  ansible.builtin.apt:
-    name: rkhunter
-    state: present
-    force: true
-    install_recommends: true
-    update_cache: true
-
 - name: Add lynis apt key
   ansible.builtin.apt_key:
     url: https://packages.cisofy.com/keys/cisofy-software-public.key
@@ -38,10 +12,19 @@
     state: present
   changed_when: true
 
-- name: Install lynis package
+- name: Install logwatch package
   ansible.builtin.apt:
-    name: lynis
+    name: "{{ item }}"
     state: present
     force: true
     install_recommends: true
     update_cache: true
+  with_items:
+    - "{{ packages }}"
+  register: install_status
+  notify:
+      - start and enable fail2ban service
+
+- name: debug install message
+  debug:
+    msg: install_status
