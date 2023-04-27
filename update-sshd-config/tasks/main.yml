@@ -15,7 +15,7 @@
 - name: Disable PermitRootLogin parameter
   ansible.builtin.lineinfile:
     path: /etc/ssh/sshd_config
-    regexp: '^\SPermitRootLogin|^PermitRootLogin'
+    regexp: '^\#PermitRootLogin|^PermitRootLogin'
     line: PermitRootLogin no
 
 - name: Restart service sshd
