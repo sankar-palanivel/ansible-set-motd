@@ -1,0 +1,5 @@
+---
+# tasks file for update-repos
+- name: Update the system packages
+  apt:
+    update_cache: true
