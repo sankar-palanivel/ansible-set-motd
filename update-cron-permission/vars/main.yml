@@ -2,8 +2,8 @@
 # vars file for update-cron-permission
 files:
   - /etc/crontab
-  - /etc/cron.hourly/*
-  - /etc/cron.daily/*
-  - /etc/cron.weekly/*
-  - /etc/cron.monthly/*
-  - /etc/cron.d/*
+  - /etc/cron.hourly
+  - /etc/cron.daily
+  - /etc/cron.weekly
+  - /etc/cron.monthly
+  - /etc/cron.d
