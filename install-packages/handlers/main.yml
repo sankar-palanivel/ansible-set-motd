@@ -4,4 +4,4 @@
     state: started
     enabled: true
   when:
-    - install_status.name == fail2ban
+    - install_status.results.item == fail2ban
