@@ -5,3 +5,9 @@
     path: /etc/hosts
     regexp: '^127\.0\.0\.1'
     line: 127.0.0.1 localhost poc-check-deployment
+
+- name: Update X11Forwarding parameter
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^X11Forwarding'
+    line: X11Forwarding no
