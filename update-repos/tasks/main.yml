@@ -3,3 +3,10 @@
 - name: Update the system packages
   apt:
     update_cache: true
+
+- name: Check for upgradable packages
+  command: apt list --upgradable
+  register: upgradable_packages
+
+- debug:
+    var: upgradable_packages.stdout_lines
