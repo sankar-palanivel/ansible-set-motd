@@ -1,5 +1,6 @@
 ---
-- hosts: selfservice_demo_group
+#- hosts: selfservice_demo_group
+- hosts: 10.1.0.19
   gather_facts: false
   become: true
 
