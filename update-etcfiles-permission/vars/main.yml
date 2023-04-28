@@ -2,15 +2,15 @@
 # vars file for update-etcfiles-permission
 files:
   - path: /etc/shadow
-    mode: '0640'
+    mode: '0400'
   - path: /etc/gshadow
-    mode: '0640'
+    mode: '0400'
   - path: /etc/passwd
-    mode: '0640'
+    mode: '0644'
   - path: /etc/group
-    mode: '0640'
+    mode: '0644'
   - path: /etc/fstab
-    mode: '0640'
+    mode: '0644'
   - path: /etc/hosts
     mode: '0640'
   - path: /etc/hostname
@@ -18,6 +18,6 @@ files:
   - path: /etc/timezone
     mode: '0640'
   - path: /etc/bash.bashrc
-    mode: '0640'
+    mode: '0644'
   - path: /boot/grub/grub.cfg
     mode: '0640'
