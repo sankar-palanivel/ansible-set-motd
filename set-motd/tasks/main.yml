@@ -11,5 +11,5 @@
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
     path: /etc/pam.d/sshd
-    regexp: 'motd\=\/run\/motd.dynamic'
-    line: motd=/etc/motd
+    regexp: 'session    optional     pam_motd.so  motd\=\/run\/motd.dynamic'
+    line: '#session    optional     pam_motd.so  motd=/run/motd.dynamic'
