@@ -7,3 +7,9 @@
     owner: root
     group: root
     mode: 0444
+
+- name: disable default dynamic motd
+  ansible.builtin.lineinfile:
+    path: /etc/pam.d/sshd
+    regexp: 'motd\=\/run\/motd.dynamic'
+    line: motd=/etc/motd

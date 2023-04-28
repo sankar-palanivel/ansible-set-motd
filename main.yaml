@@ -1,5 +1,6 @@
 ---
-- hosts: selfservice_demo_group
+# - hosts: selfservice_demo_group
+- hosts: 10.101.1.244
   gather_facts: false
   become: true
 
