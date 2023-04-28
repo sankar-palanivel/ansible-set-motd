@@ -2,7 +2,7 @@
 # tasks file for set-motd
 - name: set motd
   template:
-    src: files/motd.j2
+    src: motd.j2
     dest: /etc/motd
     owner: root
     group: root
@@ -13,3 +13,5 @@
     path: /etc/pam.d/sshd
     regexp: 'session\s+optional\s+pam_motd.so\s+motd=/run/motd.dynamic'
     line: '#session    optional     pam_motd.so  motd=/run/motd.dynamic'
+  notify:
+    - restart sshd
