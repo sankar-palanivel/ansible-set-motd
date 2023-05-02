@@ -7,13 +7,6 @@
     owner: root
     group: root
     mode: 0444
-  vars:
-    hostname_cmd: "{{ lookup('command', 'hostname') }}"
-    date_cmd: "{{ lookup('command', 'date') }}"
-    username_cmd: "{{ lookup('command', 'whoami') }}"
-
-- debug:
-    var: hostname_cmd
 
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
