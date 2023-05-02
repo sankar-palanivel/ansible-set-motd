@@ -12,6 +12,9 @@
     date_cmd: "{{ lookup('command', 'date') }}"
     username_cmd: "{{ lookup('command', 'whoami') }}"
 
+- debug:
+    var: {{ hostname_cmd }}
+
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
     path: /etc/pam.d/sshd
