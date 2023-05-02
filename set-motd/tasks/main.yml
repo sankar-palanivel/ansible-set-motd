@@ -1,10 +1,5 @@
 ---
 # tasks file for set-motd
-- set_fact:
-    hostname_cmd: "{{ lookup('command', 'hostname') }}"
-    date_cmd: "{{ lookup('command', 'date') }}"
-    username_cmd: "{{ lookup('command', 'whoami') }}"
-
 - name: set motd
   template:
     src: motd.j2
@@ -12,6 +7,10 @@
     owner: root
     group: root
     mode: 0444
+  vars:
+    hostname_cmd: "{{ lookup('command', 'hostname') }}"
+    date_cmd: "{{ lookup('command', 'date') }}"
+    username_cmd: "{{ lookup('command', 'whoami') }}"
 
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
