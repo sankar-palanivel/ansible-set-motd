@@ -1,10 +1,7 @@
-**************************************************************
-*                        WARNING:                            *
-*                                                            *
-*  This system is owned and maintained by EST Kraken Team    *
-*  Any Unauthorized access to this system is prohibited and  *
-*  Access to this system is logged and monitored.            *
-*                                                            *
-*  HOSTNAME: {{ ansible_hostname | center(30) }}             *
-*                                                            *
-**************************************************************
+{%- set asterisks = '*' * 62 -%}
+{{ asterisks }}
+*{{ line1.center(60) }}*
+*{{ line2.center(60) }}*
+*{{ line3.center(60) }}*
+*{{ line3.center(60) }}*
+{{ asterisks }}
