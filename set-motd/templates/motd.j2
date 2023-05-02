@@ -1,8 +1,8 @@
 {%- set asterisks = '*' * 62 -%}
 {%- set spaces = ' ' -%}
 {{ asterisks }}
-*{{ spaces }}{{ 'This system is owned and maintained by EST Kraken Team'.center(58) }}*
-*{{ spaces }}{{ 'Any Unauthorized access to this system is prohibited and'.center(56) }}*
-*{{ spaces }}{{ 'Access to this system is logged and monitored.'.center(46) }}*
-*{{ ansible_hostname.center(60) }}*
+*{{ spaces }}{{ 'This system is owned and maintained by EST Kraken Team'.center(60) }}*
+*{{ spaces }}{{ 'Any Unauthorized access to this system is prohibited and'.center(60) }}*
+*{{ spaces }}{{ 'Access to this system is logged and monitored.'.center(60) }}*
+*{{ spaces }}{{ 'HOSTNAME:' ~ ansible_hostname.center(50) }}*
 {{ asterisks }}
