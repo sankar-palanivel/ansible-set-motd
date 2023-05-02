@@ -7,6 +7,8 @@
     owner: root
     group: root
     mode: 0444
+  vars_files:
+    - vars/main.yml
 
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
