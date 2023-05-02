@@ -1,0 +1,3 @@
+hostname_cmd: hostname
+date_cmd: date
+username_cmd: whoami
