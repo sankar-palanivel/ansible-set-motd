@@ -1,5 +1,10 @@
 ---
 # tasks file for set-motd
+- set_fact:
+    hostname_cmd: "{{ lookup('command', 'hostname') }}"
+    date_cmd: "{{ lookup('command', 'date') }}"
+    username_cmd: "{{ lookup('command', 'whoami') }}"
+
 - name: set motd
   template:
     src: motd.j2
