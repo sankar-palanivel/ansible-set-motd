@@ -13,7 +13,7 @@
     username_cmd: "{{ lookup('command', 'whoami') }}"
 
 - debug:
-    var: {{ hostname_cmd }}
+    var: hostname_cmd
 
 - name: disable default dynamic motd
   ansible.builtin.lineinfile:
