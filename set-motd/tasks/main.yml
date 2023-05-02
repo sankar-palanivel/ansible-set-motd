@@ -1,9 +1,5 @@
 ---
 # tasks file for set-motd
-- name: Load variables from vars file
-  vars_files:
-    - vars/main.yml
-
 - name: set motd
   template:
     src: motd.j2
