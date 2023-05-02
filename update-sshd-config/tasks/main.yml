@@ -37,6 +37,12 @@
     regexp: '#ClientAliveCountMax'
     line: ClientAliveCountMax  1
 
+- name: Disable PrintLastLog parameter
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#PrintLastLog'
+    line: PrintLastLog no
+
 - name: Restart service sshd
   ansible.builtin.service:
     name: sshd
