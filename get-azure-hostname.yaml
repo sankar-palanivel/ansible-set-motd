@@ -1,5 +1,6 @@
 ---
-- hosts: all:!~build-*:!~cleura-build-*:!~yocto-build-*
+#- hosts: all:!~build-*:!~cleura-build-*:!~yocto-build-*
+- hosts: all:!~\*build-*
   gather_facts: true
   become: true
   tasks:
