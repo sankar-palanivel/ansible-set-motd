@@ -1,7 +1,6 @@
 ---
 #- hosts: all:!~build-*:!~cleura-build-*:!~yocto-build-*
-#- hosts: all:!*build-*
-- hosts: vm-aegis-docs-sc-neu-01_48f3
+- hosts: all:!*build-*
   gather_facts: true
   become: true
   tasks:
